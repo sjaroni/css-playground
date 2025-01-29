@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datalist with emojis</title>
+  </head>
+  <body>
+    <form id="fruits">
+      <label for="fruit-input">Favorite Fruit?</label>
+
+      <input
+        type="text"
+        id="fruit-input"
+        list="fruit-list"
+        placeholder="e.g. Mango"
+      />
+
+
+      <datalist id="fruit-list">
+        <option value="🍎 Apple"></option>
+        <option value="🍌 Banana"></option>
+        <option value="🥝 Kiwi"></option>
+        <option value="🍊 Orange"></option>
+      </datalist>
+
+    </form>
+  </body>
+</html>

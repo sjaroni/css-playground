@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .icons-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 12px;
+      transition: scale 300mx, filter 300mx;
+    }
+
+    .icons-container:has(:hover) :not(:hover){
+      scale: 0.8;
+      filter: blur(2px);
+    }
+
+    .icon{
+      height: 48px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="icons-container">
+    <img class="icon" src="../assets/icons/add.png" alt="">
+    <img class="icon" src="../assets/icons/caddy.png" alt="">
+    <img class="icon" src="../assets/icons/settings.png" alt="">
+    <img class="icon" src="../assets/icons/trash.png" alt="">
+    <img class="icon" src="../assets/icons/rocket.png" alt="">
+  </div>
+
+</body>
+</html>
