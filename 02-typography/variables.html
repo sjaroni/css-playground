@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+
+    <style>
+      :root {
+        --primary-color: #605dc8;
+        --secondary-color: #8b89e6;
+        --accent-color: #3ae427;
+        --shadow-color: #e8e8e8;
+      }
+
+      header{
+        background-color: var(--accent-color);
+      }
+
+      footer{
+        background-color: var(--shadow-color);
+      }
+
+      main {
+        background: var(--primary-color);
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1{
+        background-color: var(--secondary-color);
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <header>Insert header here</header>
+    <main>
+      <h1>Headline</h1>
+    </main>
+    <footer>This is the footer</footer>
+  </body>
+</html>
