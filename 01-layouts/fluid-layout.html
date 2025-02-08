@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluid Layout</title>
+
+    <style>
+      .card {
+        display: flex;
+        flex-wrap: wrap;        
+        min-width: 200px;
+        gap: 8px;
+      }
+
+      .input-field {
+        flex: 1 0 10rem;
+      }
+
+      .button {
+        flex: 1 0 5rem;
+        background: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <input type="text" class="input-field" placeholder="Username" />
+      <input type="password" class="input-field" placeholder="Password" />
+
+      <button type="submit" class="button">Submit</button>
+    </div>
+  </body>
+</html>
