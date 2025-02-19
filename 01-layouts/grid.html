@@ -6,49 +6,69 @@
   <title>Document</title>
 
   <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;      
-    }
-
-    body{
-      display: flex;
-      justify-content: center;
-    }
-
-    .grid-container{
+    .layout{
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      width: 100%;
-      background-color: black;
-      height: auto;
-      padding: 16px;
-      gap: 8px;
+      gap: .25rem;
+      grid-template-rows: 4rem 6rem auto 6rem 6rem 4rem;
+      grid-template-columns: 1fr;
+      grid-template-areas: 'header' 'sidebar' 'main' 'widget' 'statistics' 'footer';
+      height: 100vh;
     }
 
-    .item{
-      height: 80px;
-      width: 100px;
-      background-color: rgb(93, 150, 9);
-      border: 2px solid white;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      
+    header{
+      grid-area: header;
+      background: #c08bfd;
+    }
+
+    footer{
+      grid-area: footer;
+      background: #c08bfd;
+    }
+
+    nav{
+      grid-area: sidebar;
+      background: #f6c356;
+    }
+
+    main{
+      grid-area: main;
+      background: #b2ee94;
+    }
+
+    .widget{
+      grid-area: widget;
+      background: #ff8983;
+      width: 100%;
+    }
+
+    .statistics{
+      grid-area: statistics;
+      background: #99c2fe;
+      width: 100%;
+    }
+
+    @media (min-width: 480px){
+      .layout {
+        display: grid;
+        grid-template-rows: 4rem auto 6rem 4rem;
+        grid-template-columns: 10rem auto auto;
+        grid-template-areas: 'header header header' 'sidebar main main' 'sidebar widget statistics' 'footer footer footer';
+      }
     }
 
   </style>
 
 </head>
 <body>
-  <div class="grid-container">
-     <div class="item">1</div>
-     <div class="item">2</div>
-     <div class="item">3</div>
-     <div class="item">4</div>
+  
+  <div class="layout">
+    <header>header</header>
+    <nav>sidebar</nav>
+    <main>main</main>
+    <article class="widget">widget</article>
+    <article class="statistics">statistics</article>
+    <footer>footer</footer>
   </div>
+
 </body>
 </html>
