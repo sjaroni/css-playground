@@ -24,6 +24,7 @@ jobs:
         FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
       run: |
         lftp -f "
+        set ssl:verify-certificate no
         open $FTP_HOST
         user $FTP_USERNAME $FTP_PASSWORD
         mirror -R --delete . $FTP_REMOTE_DIR
