@@ -27,6 +27,6 @@ jobs:
         set ssl:verify-certificate no
         open $FTP_HOST
         user $FTP_USERNAME $FTP_PASSWORD
-        mirror -R --delete . $FTP_REMOTE_DIR
+        mirror -R --delete --exclude .git/ --exclude .github/ . $FTP_REMOTE_DIR
         bye
         "
